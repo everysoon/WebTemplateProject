@@ -1,0 +1,23 @@
+// 모든 SCSS파일에서 사용할 변수에 대한 정의만 작성
+// (이 파일은 vue.config.js에 적용)
+// ** 주의 **
+// : 컴포넌트 갯수만큼 실행되기 때문에 변수에 대해서만 정의해야하고, 실제 CSS적용은 "_index.scss"에 작성
+// vuetify를 사용할 경우 vuetify 일부 변수를 사용할 수 있음
+
+
+$body-font-family : "Apple SD Gothic Neo" , "Malgun Gothic", "sans-serif";
+$border-radius-root : 6px;
+$font-size-root : 14px;
+
+// 색상
+$primary : #FFB6C1;
+$light-primary : #FFC0CB;
+$dark-primary : #F1B1CB;
+$coral : #FFCAC1;
+$light-coral : #F08080;
+
+$gray:#B7B9BA;
+$dark-gray:#5A5A5A;
+$second-gray:#959595;
+$white:#ffffff;
+$black:#000000;

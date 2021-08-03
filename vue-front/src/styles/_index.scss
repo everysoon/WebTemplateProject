@@ -1,0 +1,17 @@
+// 모든 SCSS파일을 한곳으로 모으는 CSS (단, _variable.scss는 여기 포함되지 않음)
+// 1. layouts 폴더 : 웹페이지 전체를 구성하는 레이아웃에 대한 CSS
+// 2. pages 폴더 : 로그인, 메인화면 등 개별로 존재하는 화면에 대한 CSS
+// 3. components 폴더 : 버튼, 인풋박스 등 개별 컨포넌트에 대한 CSS
+// 4. templates 폴더 :  여러개의 Components로 구현된 해당 웹 페이지에 특화된 템플릿 CSS
+
+// vuetify 변수를 사용할 경우 적용
+@import "node_modules/vuetify/src/styles/main";
+
+
+@import "src/styles/commons";
+@import "src/assets/scss/componentsnents/v-btn";
+@import "src/assets/scss/templateslates/making";
+// pages 폴더는 화면 중 특별히 해당페이지만 적용되어야 할 경우 스타일 적용
+@import "src/assets/scss/pagespages/login";
+// layouts 폴더는 전체 레이아웃에 대한 스타일, 경우에 따라 1~2개정도의 소량이 생산될 확률이 높음
+@import "src/assets/scss/layoutsyouts/default";
