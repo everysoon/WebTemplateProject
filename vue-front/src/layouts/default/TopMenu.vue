@@ -1,38 +1,70 @@
 <template>
-  <v-card class="overflow-hidden">
     <v-app-bar
-        color="lightCoral"
+        color="white rounded-0"
+        flat
     >
-      <v-app-bar-title>Title</v-app-bar-title>
-      <menu-button title="시작하기" tab="true"/>
-      <menu-button title="활용하기" tab="true"/>
-      <menu-button title="자랑하기" tab="true"/>
-      <menu-button title="공지/안내" tab="true"/>
+      <v-spacer/>
+      <soon-title/>
+      <div v-for="(m,index) in menu " :key="index">
+        <menu-button v-if="index<4" :item="m"/>
+      </div>
       <v-spacer/>
       <div v-if="!login">
-      <menu-button title="로그인" tab="false"/>
-      <menu-button title="회원가입" tab="false"/>
+      <menu-button :item="menu[4]"/>
+      <menu-button :item="menu[5]"/>
       </div>
       <div v-else>
-        <menu-button title="마이페이지" tab="false"/>
+        <menu-button :item="menu[6]"/>
       </div>
+      <v-spacer/>
     </v-app-bar>
-    <v-sheet
-        id="scrolling-techniques-3"
-        class="overflow-y-auto"
-        max-height="600"
-    >
-    </v-sheet>
-  </v-card>
 </template>
 
 <script>
-import MenuButton from "../../components/MenuButton";
+import MenuButton from "@/components/MenuButton";
+import SoonTitle from "@/components/SoonTitle";
 export default {
   name: "TopMenu",
-  components: {MenuButton},
+  components: {SoonTitle, MenuButton},
   data:()=>({
     login:false,
+    menu:[
+      {
+        title:"시작하기",
+        tab:true,
+        link:"/start"
+      },
+      {
+        title:"활용하기",
+        tab:true,
+        link:"/util"
+      },
+      {
+        title:"자랑하기",
+        tab:true,
+        link:"/affect"
+      },
+      {
+        title:"공지/문의",
+        tab:true,
+        link:"/qna"
+      },
+      {
+        title:"로그인",
+        tab:false,
+        link:"/sign-in"
+      },
+      {
+        title:"회원가입",
+        tab:false,
+        link:"/sign-up"
+      },
+      {
+        title:"마이페이지",
+        tab:false,
+        link:"/mypage"
+      },
+    ]
   })
 }
 </script>

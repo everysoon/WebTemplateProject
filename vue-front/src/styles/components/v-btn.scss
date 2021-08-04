@@ -1,1 +1,15 @@
 // vutify에서 제공되는 v-btn 재정의
+$btn-hover-opacity: 0.05 ;
+$btn-font-sizes: 26px ;
+$btn-font-weight: 1000 ;
+$btn-border-radius: 0px;
+$btn-outline-border-width: 5px;
+$btn-sizes: (
+        'large' : 52,
+        'x-large' :60,
+);
+
+$btn-font-sizes: (
+        'large': 1rem,
+        'x-large': 1.25rem
+);

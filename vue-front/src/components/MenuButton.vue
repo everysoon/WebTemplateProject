@@ -1,30 +1,44 @@
 <template>
-<v-btn :class="{menu:tab,auth:!tab}" >{{title}}</v-btn>
+  <router-link v-if="item.tab" :to="item.link"  class="mr-2 ml-2 text-decoration-none" >
+    <v-btn class="font-weight-bold text--darken-3 gray--text" tile text x-large>
+      {{item.title}}
+    </v-btn>
+  </router-link>
+    <router-link v-else :to="item.link" class="text-decoration-none mt-5 mb-5 ml-1 mr-1" >
+      <v-btn  class="pink--text text--darken-4 pink lighten-3"  depressed tile >
+      {{item.title}}
+      </v-btn>
+    </router-link>
+
 </template>
 
 <script>
 export default {
   name: "MenuButton",
   props:{
-    title:String,
-    tab:Boolean,
+    item : Object
   }
 }
 </script>
 
-<style  lang="scss">
-.menu{
-  height: 70px;
-  width: 80px;
-  border:1px solid red;
-  color:$gray;
+<style scoped lang="scss">
+.v-btn:hover:before{
+
 }
-.auth{
-  padding:5px 10px;
-  margin-right: 5px;
-  height: 60px;
-  width:50px;
-  color:$dark-gray;
-  border:1px solid yellow;
+.v-btn:focus:before{
+  color:black;
 }
+.logo{
+  text-decoration: none;
+}
+.active {
+  color: white;
+  background-color: red;
+}
+
+.exact-active {
+  color: white;
+  background-color: blue;
+}
+
 </style>
