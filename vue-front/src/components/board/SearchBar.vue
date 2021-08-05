@@ -5,10 +5,10 @@
   v-model="search"
   @input="changeSearchField"
   append-icon="mdi-magnify"
-  label="Search"
   single-line
   hide-details
-  />
+  label="Search"
+  ></v-text-field>
 </div>
 </template>
 

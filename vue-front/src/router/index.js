@@ -22,19 +22,7 @@ const routes = [
             {
                 path:'/qna',
                 name: 'QnA',
-                component:()=>import('@/layouts/default/QnALayout'),
-                chlidren:[
-                    {
-                        path:'notice',
-                        name:"Notice",
-                        component:()=>import('@/views/qna/Notice')
-                    },
-                    {
-                        path:'guide',
-                        name:"Guide",
-                        component:()=>import('@/views/qna/Guide')
-                    }
-                ]
+                component:()=>import('@/views/QnA'),
             }
         ],
     },

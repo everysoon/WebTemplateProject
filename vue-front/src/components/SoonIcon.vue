@@ -12,15 +12,16 @@
 export default {
   name: "SoonIcon",
   data:()=>({
-    iconColor:''
+    myColor:''
   }),
   props:{
     iconColor:String
   },
-  computed:{
+  methods:{
     whatColor:function(){
       console.log(this.iconColor);
-      return this.iconColor+'--text'
+      this.myColor = this.iconColor+'--text'
+      return this.myColor;
     }
   }
 }

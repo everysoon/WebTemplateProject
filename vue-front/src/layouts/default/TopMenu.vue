@@ -48,7 +48,7 @@ export default {
       {
         title:"공지/안내",
         tab:true,
-        link:"/qna/notice"
+        link:"/qna"
       },
       {
         title:"로그인",

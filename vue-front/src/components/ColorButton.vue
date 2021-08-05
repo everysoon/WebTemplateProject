@@ -1,9 +1,9 @@
 <template>
 
-  <v-row justify="center">
+  <v-row justify="center" class="mt-3">
     <v-col cols="auto" v-for="(item,i) in items" :key= i >
-      <v-btn :class="whatColor"
-             :to="item.link"
+      <v-btn class="font-weight-bold teal lighten-1 white--text"
+             @click="onClickColorButton(i)"
              :style="[i>1 ? ['margin-right:10px; margin-left:10px']: {}]"
              x-large plain text tile
       >{{item.title}}</v-btn>
@@ -15,7 +15,7 @@
     Object: {
       title : String,
       link : String,
-      color: String
+      kind: String
     }
   ]
   -->
@@ -25,13 +25,16 @@
 export default {
   name: "ColorButton",
   data:()=>({
+
   }),
   props:{
-    items:Object,
+    items:Array,
   },
+
   methods:{
-    whatColor(){
-      return this.item.color+'--text font-weight-bold'
+    onClickColorButton(index){
+      console.log("in colorButton "+this.items[index].kind);
+      this.$emit('whatKindColorButton',this.items[index].kind);
     }
   }
 }
