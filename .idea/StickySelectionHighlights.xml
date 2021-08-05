@@ -13,6 +13,31 @@
             <PaintGroupHighlightMap />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/ColorButton.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/Drawer.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/DrawerBar.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/DrawerHeader.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/DrawerList.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/vue-front/src/components/IconButton.vue">
           <value>
             <PaintGroupHighlightMap />
@@ -29,6 +54,56 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/vue-front/src/components/NavTop.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/SoonIcon.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/SoonTitle.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/board/BoardItem.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/board/BoardList.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/board/SearchBar.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/drawer/Drawer.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/drawer/DrawerList.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/drawer/DrawerListGroup.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/drawer/DrawerListItem.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/layouts/auth/AuthLayout.vue">
           <value>
             <PaintGroupHighlightMap />
           </value>
@@ -63,6 +138,11 @@
             <PaintGroupHighlightMap />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/layouts/default/QnALayout.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/vue-front/src/layouts/default/TabMenu.vue">
           <value>
             <PaintGroupHighlightMap />
@@ -84,6 +164,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/vue-front/src/router/index.js">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/store/index.js">
           <value>
             <PaintGroupHighlightMap />
           </value>
@@ -118,12 +203,47 @@
             <PaintGroupHighlightMap />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/styles/variables.scss">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/vue-front/src/views/Home.vue">
           <value>
             <PaintGroupHighlightMap />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/views/QnA.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/views/auth/SignIn.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/views/auth/SignUp.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/views/auth/SingUp.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/vue-front/src/views/authentication/SingIn.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/views/qna/Guide.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/views/qna/Notice.vue">
           <value>
             <PaintGroupHighlightMap />
           </value>

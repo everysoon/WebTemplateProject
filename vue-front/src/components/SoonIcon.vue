@@ -1,16 +1,28 @@
 <template>
   <div>
-    <v-icon x-large color="white">mdi-ring</v-icon>
-<div>
-    <h3 class="float-left white--text">Wedding</h3>
-    <h7 class="white--text ml-1">soon</h7>
+    <v-icon x-large :color="iconColor">mdi-ring</v-icon>
+<div :class="whatColor">
+    <h3 class="float-left">Wedding</h3>
+    <h6 class=" ml-1">soon</h6>
 </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "SoonIcon"
+  name: "SoonIcon",
+  data:()=>({
+    iconColor:''
+  }),
+  props:{
+    iconColor:String
+  },
+  computed:{
+    whatColor:function(){
+      console.log(this.iconColor);
+      return this.iconColor+'--text'
+    }
+  }
 }
 </script>
 

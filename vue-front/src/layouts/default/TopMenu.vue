@@ -4,7 +4,7 @@
         flat
     >
       <v-spacer/>
-      <soon-title/>
+      <soon-title :home="true"/>
       <div v-for="(m,index) in menu " :key="index">
         <menu-button v-if="index<4" :item="m"/>
       </div>
@@ -22,7 +22,8 @@
 
 <script>
 import MenuButton from "@/components/MenuButton";
-import SoonTitle from "@/components/SoonTitle";
+import SoonTitle  from "@/components/SoonTitle";
+
 export default {
   name: "TopMenu",
   components: {SoonTitle, MenuButton},
@@ -45,19 +46,19 @@ export default {
         link:"/affect"
       },
       {
-        title:"공지/문의",
+        title:"공지/안내",
         tab:true,
-        link:"/qna"
+        link:"/qna/notice"
       },
       {
         title:"로그인",
         tab:false,
-        link:"/sign-in"
+        link:"/auth/sign-in"
       },
       {
         title:"회원가입",
         tab:false,
-        link:"/sign-up"
+        link:"/auth/sign-up"
       },
       {
         title:"마이페이지",

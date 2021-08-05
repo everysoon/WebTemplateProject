@@ -1,20 +1,33 @@
 <template>
   <router-link to="/">
-      <v-img   alt="logoImg" src="@/assets/logo.png"  @click="goToHome" @mouseover="hoverLogo" max-width="150"/>
+      <v-img alt="logoImg"
+             :src="require('@/assets/logo.png')"
+             @click="goToHome"
+             @mouseover="hoverLogo"
+             :max-width="home?150:250"
+
+      />
   </router-link>
 </template>
 
 <script>
 export default {
   name: "Title",
+  data:()=>({
+
+  }),
   methods:{
     goToHome(){
       console.log("goToHome");
     },
     hoverLogo(e){
       e.target.style.cursor = "pointer"
-    }
-  }
+    },
+  },
+  props:{
+    home:Boolean
+  },
+
 }
 </script>
 

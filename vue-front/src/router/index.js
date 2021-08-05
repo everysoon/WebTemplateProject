@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue       from 'vue'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
@@ -7,7 +7,7 @@ const routes = [
     {
         path: '/',
         name: 'DefaultLayout',
-        component: () => import('@/layouts/default/DefaultLayout.vue'),
+        component: () => import('@/layouts/default/DefaultLayout'),
         children: [
             {
                 path: '/',
@@ -22,7 +22,36 @@ const routes = [
             {
                 path:'/qna',
                 name: 'QnA',
-                component:()=>import('@/views/QnA')
+                component:()=>import('@/layouts/default/QnALayout'),
+                chlidren:[
+                    {
+                        path:'notice',
+                        name:"Notice",
+                        component:()=>import('@/views/qna/Notice')
+                    },
+                    {
+                        path:'guide',
+                        name:"Guide",
+                        component:()=>import('@/views/qna/Guide')
+                    }
+                ]
+            }
+        ],
+    },
+    {
+        path:'/auth',
+        name:'AuthLayout',
+        component:()=>import('@/layouts/auth/AuthLayout'),
+        children: [
+            {
+                path:'sign-in',
+                name:'SignIn',
+                component:()=>import('@/views/auth/SignIn')
+            },
+            {
+                path:'sign-up',
+                name:'SignUp',
+                component:()=>import('@/views/auth/SignUp')
             }
         ]
     }

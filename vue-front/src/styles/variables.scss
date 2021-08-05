@@ -6,7 +6,7 @@
 @import '~vuetify/src/styles/styles.sass';
 @import '~vuetify/src/styles/settings/_variables.scss';
 
-$body-font-family:  "Dotum","Nanum Gothic","Malgun Gothic", "sans-serif";
+$body-font-family:  "Roboto","Dotum","Nanum Gothic","Malgun Gothic", "sans-serif";
 $border-radius-root: 6px;
 $font-size-root: 18px;
 $headings: (
@@ -23,6 +23,7 @@ $light-primary: #FFC0CB;
 $dark-primary: #F1B1CB;
 $coral: #FFCAC1;
 $light-coral: #F08080;
+$primary-l-1 : #EC407A;
 
 $gray: #B7B9BA;
 $dark-gray: #5A5A5A;
