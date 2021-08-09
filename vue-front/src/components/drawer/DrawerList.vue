@@ -27,7 +27,7 @@ export default {
       {
         title:"시작하기",
         icon:"mdi-arrow-bottom-right-thick",
-        to:"/start"
+        to:"/start/1"
       },
       {
         title:"활용하기",

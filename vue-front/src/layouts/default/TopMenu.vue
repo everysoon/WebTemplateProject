@@ -21,8 +21,8 @@
 </template>
 
 <script>
-import MenuButton from "@/components/MenuButton";
-import SoonTitle  from "@/components/SoonTitle";
+import MenuButton from "@/components/button/MenuButton";
+import SoonTitle  from "@/components/button/SoonTitle";
 
 export default {
   name: "TopMenu",
@@ -33,7 +33,7 @@ export default {
       {
         title:"시작하기",
         tab:true,
-        link:"/start"
+        link:"/start/1"
       },
       {
         title:"활용하기",

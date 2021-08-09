@@ -5,7 +5,6 @@
              @click="goToHome"
              @mouseover="hoverLogo"
              :max-width="home?150:250"
-
       />
   </router-link>
 </template>

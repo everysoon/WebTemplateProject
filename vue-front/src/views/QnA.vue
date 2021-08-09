@@ -1,20 +1,7 @@
 <template>
   <div>
-    <v-card flat tile>
-      <div>
-        <v-img src="@/assets/qnaBackground.jpg" max-height="350" class="d-flex align-center text-center">
-          <v-row>
-          <v-spacer/>
-          <v-col cols="10">
-          <v-card-text class="d-flex">
-            <soon-icon iconColor="white"/>
-            <h1 class="white--text ml-5 "> 웨딩순에서 알려드립니다!</h1>
-          </v-card-text>
-          </v-col>
-          </v-row>
-        </v-img>
-      </div>
-    </v-card>
+    <background-bar filename="qnaBackground.jpg" :icon="true"
+                    sub-title="웨딩순에서 알려드립니다!"/>
         <color-button @whatKindColorButton="whatKindColorButton" :items="items"/>
     <v-row justify="center">
       <v-col cols="10">
@@ -25,13 +12,13 @@
 </template>
 
 <script>
-import SoonIcon    from "@/components/SoonIcon";
-import ColorButton from "@/components/ColorButton";
-import BoardList   from "@/components/board/BoardList";
+import ColorButton   from "@/components/button/ColorButton";
+import BoardList     from "@/components/board/BoardList";
+import BackgroundBar from "../components/BackgroundBar";
 
 export default {
   name: "QnA",
-  components: {BoardList, ColorButton, SoonIcon},
+  components: {BackgroundBar, BoardList, ColorButton},
   data:()=>({
     kind:'notice',
     clickKind:'notice',
