@@ -13,13 +13,14 @@
       />
     </v-col>
     <v-col cols="5">
-      <text-menu title="본문형"
-          @changeSize="changeSize"
-                  @changeAlign="changeAlign"
-                  @changeText="changeText"
-                 @changeListkinds="changeListkinds"
-                 @changeKinds="changeKinds"
-      />
+<!--      <text-menu title="본문형"-->
+<!--          @changeSize="changeSize"-->
+<!--                  @changeAlign="changeAlign"-->
+<!--                  @changeText="changeText"-->
+<!--                 @changeListkinds="changeListkinds"-->
+<!--                 @changeKinds="changeKinds"-->
+<!--      />-->
+      <image-menu/>
     </v-col>
   </v-row>
 </template>
@@ -27,11 +28,11 @@
 <script>
 import MobilePreViewFrame from "../../components/start/making/MobilePreViewFrame";
 import LeftMenu           from "../../components/start/making/leftMenu/LeftMenu";
-import TextMenu           from "../../components/start/making/rightMenu/TextMenu";
+import ImageMenu from "@/components/start/making/rightMenu/ImageMenu";
 
 export default {
   name      : "StartHome",
-  components: {TextMenu, LeftMenu, MobilePreViewFrame},
+  components: {ImageMenu, LeftMenu, MobilePreViewFrame},
   data:()=>({
     text:'',
     size:'',

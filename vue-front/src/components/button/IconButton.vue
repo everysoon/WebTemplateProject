@@ -1,6 +1,9 @@
 <template>
-  <v-btn icon @click="changeIcon">
-    <v-icon>mdi-{{icon}}</v-icon>
+  <v-btn icon v-if="!link" @click="changeIcon">
+    <v-icon :size="size">mdi-{{icon}}</v-icon>
+  </v-btn>
+  <v-btn icon v-else @click="newPageRedirect" color="white">
+    <v-icon :size="size">mdi-{{icon}}</v-icon>
   </v-btn>
 </template>
 
@@ -10,11 +13,17 @@ export default {
   props:{
     icon:String,
     color:String,
+    size:String,
+    link:Boolean,
+    goToLink:String
   },
   methods:{
     changeIcon(){
       this.$emit('changeIcon',this.icon);
     },
+    newPageRedirect(){
+      window.open(this.goToLink,"_blank");
+    }
 
   }
 }

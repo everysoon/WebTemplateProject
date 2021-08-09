@@ -1,34 +1,37 @@
 <template>
   <v-app>
-  <start-bar  @clickDrawer="changeDrawer" title="Template01.임시"/>
+    <start-bar @clickDrawer="changeDrawer" title="Template01.임시"/>
     <drawer :value="drawer" @clickDrawer="changeDrawer"/>
     <v-main>
       <start-menu @clickStartMenu="clickStartMenu"/>
       <v-container fluid>
-    <router-view/>
+        <router-view/>
       </v-container>
     </v-main>
+    <soon-footer/>
   </v-app>
 </template>
 
 <script>
 import StartMenu from "../components/start/StartMenu";
-import StartBar  from "../components/start/StartBar";
-import Drawer    from "../components/Drawer";
+import StartBar from "../components/start/StartBar";
+import Drawer from "../components/Drawer";
+import SoonFooter from "@/components/SoonFooter";
 
 export default {
   name: "StartLayout",
-  components: {Drawer, StartBar, StartMenu},
-  data:()=>({
-    drawer:null
+  components: {SoonFooter, Drawer, StartBar, StartMenu},
+  data: () => ({
+    drawer: null,
+
   }),
-  methods:{
+  methods: {
     changeDrawer(val) {
       this.drawer = !val;
-      console.log("this.drawer?"+this.drawer);
+      console.log("this.drawer?" + this.drawer);
     },
-    clickStartMenu(id){
-      this.$router.push('/start/'+id);
+    clickStartMenu(id) {
+      this.$router.push('/start/' + id);
     }
   }
 }
