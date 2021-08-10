@@ -20,7 +20,15 @@
 <!--                 @changeListkinds="changeListkinds"-->
 <!--                 @changeKinds="changeKinds"-->
 <!--      />-->
-      <image-menu/>
+<!--      <image-menu/>-->
+<!--      <multi-image-with-text-menu/>-->
+<!--      <multi-image-menu/>-->
+<!--      <map-menu/>-->
+<!--      <button-menu subtitle="막대"/>-->
+<!--      <video-menu/>-->
+<!--      <line-menu/>-->
+<!--      <s-n-s-menu/>-->
+      <map-setting-menu/>
     </v-col>
   </v-row>
 </template>
@@ -28,11 +36,12 @@
 <script>
 import MobilePreViewFrame from "../../components/start/making/MobilePreViewFrame";
 import LeftMenu           from "../../components/start/making/leftMenu/LeftMenu";
-import ImageMenu from "@/components/start/making/rightMenu/ImageMenu";
+import MapSettingMenu from "@/components/start/making/rightMenu/MapSettingMenu";
+
 
 export default {
   name      : "StartHome",
-  components: {ImageMenu, LeftMenu, MobilePreViewFrame},
+  components: {MapSettingMenu, LeftMenu, MobilePreViewFrame},
   data:()=>({
     text:'',
     size:'',

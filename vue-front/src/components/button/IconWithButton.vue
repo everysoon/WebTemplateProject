@@ -1,5 +1,5 @@
 <template>
-  <v-btn rounded>
+  <v-btn rounded :width="size">
     <v-icon>mdi-{{icon}}</v-icon>
     &nbsp;{{buttonName}}
   </v-btn>
@@ -10,7 +10,8 @@ export default {
   name: "IconWithButton",
   props:{
     icon:String,
-    buttonName:String
+    buttonName:String,
+    size:Number
   }
 }
 </script>

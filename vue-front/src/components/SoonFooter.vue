@@ -2,8 +2,8 @@
   <v-footer padless>
     <v-container fluid flat tile class="pink darken-3 white--text text-center">
       <v-card-text class="white--text text-sm-center" @click="hidden= !hidden">
-        <icon-button :icon="icon.icon" :go-to-link="icon.goToLink" :link="true" v-for="icon in icons" size="30px"
-                     :key="icon"/>
+        <icon-button :icon="icon.icon" :go-to-link="icon.goToLink" :link="true" v-for="(icon,i) in icons" size="30px"
+                     :key="i"/>
         <v-divider vertical class="mr-5 ml-5"/>
         {{ soonInfo.name }} ({{ soonInfo.name_en }})
         {{ soonInfo.school }}
