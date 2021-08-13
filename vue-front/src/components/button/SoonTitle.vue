@@ -1,7 +1,7 @@
 <template>
   <router-link to="/">
       <v-img alt="logoImg"
-             :src="require('@/assets/logo.png')"
+             :src="require('@/assets/logo.jpg')"
              @click="goToHome"
              @mouseover="hoverLogo"
              :max-width="home?150:250"

@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <v-app >
     <v-app-bar-nav-icon  @click="clickDrawer" />
     <soon-title class="d-flex mt-15 mb-5 justify-center"/>
@@ -26,6 +27,14 @@ export default {
       this.drawer = !val;
     }
   }
+=======
+<router-view/>
+</template>
+
+<script>
+export default {
+  name: "AuthLayout"
+>>>>>>> 9341e59035599ee62c980c994ae1147654be5532
 }
 </script>
 
