@@ -51,7 +51,7 @@ const routes = [
     {
         path:'/start',
         name:'StartLayout',
-        component:()=>import('@/layouts/StartLayout'),
+        component:()=>import('@/layouts/start/StartLayout'),
         children: [
             {
                 path:'1',

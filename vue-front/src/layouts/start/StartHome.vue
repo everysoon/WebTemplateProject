@@ -1,11 +1,11 @@
 <template>
   <v-row>
-    <v-col cols="3">
+    <v-col cols="2">
 <!--    <left-menu/>-->
       <left-template/>
     </v-col>
-    <v-col cols="4">
-      <mobile-pre-view-frame :align="align"
+    <v-col cols="5">
+      <mobile-preview-frame :align="align"
                              :size="size"
                              :text="text"
                              :kinds="kinds"
@@ -37,13 +37,14 @@
 </template>
 
 <script>
-import MobilePreViewFrame from "../../components/start/making/MobilePreViewFrame";
+
 import TemplateMenu       from "../../components/start/making/rightMenu/TemplateMenu";
 import LeftTemplate       from "../../components/start/making/leftMenu/LeftTemplate";
+import MobilePreviewFrame from "@/components/start/making/MobilePreViewFrame";
 
 export default {
   name      : "StartHome",
-  components: {LeftTemplate, TemplateMenu, MobilePreViewFrame},
+  components: {MobilePreviewFrame, LeftTemplate, TemplateMenu, },
   data:()=>({
     text:'',
     size:'',

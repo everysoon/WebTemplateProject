@@ -17,7 +17,8 @@ export default {
   methods:{
     changeRadio(e){
       console.log('changeRadio'+e);
-      this.$emit('changeRadio',e);
+      this.$store.commit('changeSoonRadio',e);
+      // this.$emit('changeRadio',e);
     }
   }
 }

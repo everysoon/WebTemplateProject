@@ -6,10 +6,10 @@
   <v-col v-if="image">
     <tool-tip-icon-button tooltip="이미지 올리기" icon="file-upload" />
   </v-col>
-  <v-col v-if="map">
+  <v-col v-if="map" cols="4">
     <icon-with-button icon="map-marker" button-name="지도에서 위치 선택"/>
   </v-col>
-  <v-col v-if="use" cols="3">
+  <v-col v-if="use" cols="2">
     <v-checkbox label="사용" @change="changeTitleUse"/>
   </v-col>
   <v-col v-if="subTitleUse" cols="12" class="pa-0 pb-3 d-flex align-center">

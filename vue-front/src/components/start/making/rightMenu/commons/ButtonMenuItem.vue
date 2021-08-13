@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12">
-      <v-card-subtitle>버튼{{++cnt}}</v-card-subtitle>
+      <v-card-subtitle>버튼{{cnt}}</v-card-subtitle>
     </v-col>
     <v-col cols="1" >
       <v-icon  size="34px" class="pb-3 pl-2 " color="pink">mdi-cellphone</v-icon>

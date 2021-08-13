@@ -1,5 +1,5 @@
 <template>
-  <v-card color="gray" height="500px">
+  <v-card color="gray" height="650">
     <v-row dense>
       <v-col class="d-flex align-center justify-center mt-3">
         <icon-with-button icon="cellphone" button-name="모바일 미리보기" class="mr-3"/>
@@ -22,7 +22,7 @@ import IconWithButton     from "../../button/IconWithButton";
 import MobilePreViewInner from "./MobilePreViewInner";
 
 export default {
-  name      : "MobilePreview",
+  name      : "MobilePreviewFrame",
   components: {MobilePreViewInner, IconWithButton},
   props:{
     text:String,

@@ -1,6 +1,6 @@
 <template>
   <v-card class="pa-5">
-    <menu-title :title="subtitle`버튼`"/>
+    <menu-title :title="`${subtitle}버튼`"/>
     <v-divider/>
     <button-menu-item/>
     <v-divider/>

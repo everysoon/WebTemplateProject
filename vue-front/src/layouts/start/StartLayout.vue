@@ -5,7 +5,8 @@
     <v-main>
       <start-menu @clickStartMenu="clickStartMenu"/>
       <v-container fluid>
-        <router-view/>
+<!--        <router-view/>-->
+        <start-bottom-layout :clickMenu="clickMenu" />
       </v-container>
     </v-main>
     <soon-footer/>
@@ -13,25 +14,26 @@
 </template>
 
 <script>
-import StartMenu from "../components/start/StartMenu";
-import StartBar from "../components/start/StartBar";
-import Drawer from "../components/Drawer";
+import StartMenu from "../../components/start/StartMenu";
+import StartBar from "../../components/start/StartBar";
+import Drawer from "../../components/Drawer";
 import SoonFooter from "@/components/SoonFooter";
+import StartBottomLayout from "@/layouts/start/StartBottomLayout";
 
 export default {
   name: "StartLayout",
-  components: {SoonFooter, Drawer, StartBar, StartMenu},
+  components: {StartBottomLayout, SoonFooter, Drawer, StartBar, StartMenu},
   data: () => ({
     drawer: null,
-
+    clickMenu:1,
   }),
   methods: {
     changeDrawer(val) {
       this.drawer = !val;
-      console.log("this.drawer?" + this.drawer);
     },
     clickStartMenu(id) {
-      this.$router.push('/start/' + id);
+      this.clickMenu = id;
+      // this.$router.push('/start/' + id);
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <v-card class="pa-5">
-    <menu-title :title="title`텍스트`"/>
+    <menu-title :title="`${title} 텍스트`"/>
     <v-divider/>
     <soon-radio v-if="title==='타이틀'" :item="size"/>
 <!--    <v-row v-if="title==='타이틀'">-->
@@ -44,16 +44,15 @@
     <v-text-field v-model="titleText" @input="changeText" />
   </v-card>
 </template>
-
 <script>
-import MenuTitle from "./commons/MenuTitle";
-import SoonRadio from "./commons/SoonRadio";
 
+import SoonRadio from "@/components/start/making/rightMenu/commons/SoonRadio";
+import MenuTitle from "@/components/start/making/rightMenu/commons/MenuTitle";
 export default {
   name: "TextMenu",
-  components: {SoonRadio, MenuTitle},
+  components: {MenuTitle, SoonRadio },
   props:{
-    title:String
+    getClickLeftMenu:Number,
   },
   data:()=>({
     size:[
@@ -104,7 +103,11 @@ export default {
     list:false
   }),
   computed:{
-
+    title(){
+       if(this.getClickLeftMenu===4) return '목록형'
+      else if(this.getClickLeftMenu===3) return '본문형'
+      else return '타이틀'
+    }
   },
   methods:{
     selectList(e){
