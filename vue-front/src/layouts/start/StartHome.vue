@@ -1,7 +1,8 @@
 <template>
   <v-row>
     <v-col cols="3">
-    <left-menu/>
+<!--    <left-menu/>-->
+      <left-template/>
     </v-col>
     <v-col cols="4">
       <mobile-pre-view-frame :align="align"
@@ -28,20 +29,21 @@
 <!--      <video-menu/>-->
 <!--      <line-menu/>-->
 <!--      <s-n-s-menu/>-->
-      <map-setting-menu/>
+<!--      <map-setting-menu/>-->
+<!--      <congratulation-menu/>-->
+      <template-menu/>
     </v-col>
   </v-row>
 </template>
 
 <script>
 import MobilePreViewFrame from "../../components/start/making/MobilePreViewFrame";
-import LeftMenu           from "../../components/start/making/leftMenu/LeftMenu";
-import MapSettingMenu from "@/components/start/making/rightMenu/MapSettingMenu";
-
+import TemplateMenu       from "../../components/start/making/rightMenu/TemplateMenu";
+import LeftTemplate       from "../../components/start/making/leftMenu/LeftTemplate";
 
 export default {
   name      : "StartHome",
-  components: {MapSettingMenu, LeftMenu, MobilePreViewFrame},
+  components: {LeftTemplate, TemplateMenu, MobilePreViewFrame},
   data:()=>({
     text:'',
     size:'',
