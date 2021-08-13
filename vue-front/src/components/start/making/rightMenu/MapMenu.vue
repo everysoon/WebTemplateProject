@@ -1,11 +1,6 @@
 <template>
 <v-card class="pa-5">
-  <v-row>
-    <v-col class="d-flex align-center">
-      <v-card-title class="font-weight-black">지도</v-card-title>
-      <icon-with-button icon="map-marker" button-name="지도에서 위치 선택"/>
-    </v-col>
-  </v-row>
+ <menu-title title="지도" :map="true"/>
   <v-divider class="mt-3 mb-3"/>
   <v-row>
     <v-col>
@@ -17,10 +12,11 @@
 </template>
 
 <script>
-import IconWithButton from "@/components/button/IconWithButton";
+import MenuTitle from "./commons/MenuTitle";
+
 export default {
   name: "MapMenu",
-  components: {IconWithButton},
+  components: {MenuTitle},
   methods:{
     changeWeddingHall(e){
       console.log('changeWeddingHall'+e);

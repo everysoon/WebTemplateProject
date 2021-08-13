@@ -1,66 +1,117 @@
 <template>
   <v-card class="pa-5">
-    <v-card-title class="font-weight-black">{{title}} 텍스트</v-card-title>
+    <menu-title :title="title`텍스트`"/>
     <v-divider/>
-    <v-row v-if="title==='타이틀'">
-      <v-col>
-        <v-radio-group v-model="size" row @change="changeSize">
-          <v-radio label="작게" value="text-subtitle-1"/>
-          <v-radio label="크게" value="text-h4"/>
-        </v-radio-group>
-      </v-col>
-    </v-row>
-    <v-row v-else>
-      <v-col>
-        <v-radio-group v-model="kinds" row @change="changeKinds">
-          <v-radio label="본문형" value="본문형"/>
-          <v-radio label="목록형" value="목록형"/>
-        </v-radio-group>
-      </v-col>
-    </v-row>
+    <soon-radio v-if="title==='타이틀'" :item="size"/>
+<!--    <v-row v-if="title==='타이틀'">-->
+<!--      <v-col>-->
+<!--        <v-radio-group v-model="size" row @change="changeSize">-->
+<!--          <v-radio label="작게" value="text-subtitle-1"/>-->
+<!--          <v-radio label="크게" value="text-h4"/>-->
+<!--        </v-radio-group>-->
+<!--      </v-col>-->
+<!--    </v-row>-->
+    <soon-radio v-else :item="kinds" @changeRadio="selectList"/>
+<!--    <v-row v-else>-->
+<!--      <v-col>-->
+<!--        <v-radio-group v-model="kinds" row @change="changeKinds">-->
+<!--          <v-radio label="본문형" value="본문형"/>-->
+<!--          <v-radio label="목록형" value="목록형"/>-->
+<!--        </v-radio-group>-->
+<!--      </v-col>-->
+<!--    </v-row>-->
     <v-divider/>
-    <v-row v-if="kind">
-      <v-col>
-        <v-radio-group v-model="listkinds" row @change="changeListkinds">
-          <v-radio label="번호형" value="ol"/>
-          <v-radio label="기호형" value="ul"/>
-        </v-radio-group>
-      </v-col>
-    </v-row>
+    <soon-radio v-if="list" :item="listKinds"/>
+<!--    <v-row v-if="kind">-->
+<!--      <v-col>-->
+<!--        <v-radio-group v-model="listkinds" row @change="changeListkinds">-->
+<!--          <v-radio label="번호형" value="ol"/>-->
+<!--          <v-radio label="기호형" value="ul"/>-->
+<!--        </v-radio-group>-->
+<!--      </v-col>-->
+<!--    </v-row>-->
     <v-divider/>
-    <v-row>
-      <v-col>
-        <v-radio-group v-model="align" row @change="changeAlign">
-          <v-radio label="왼쪽 정렬" value="text-left"/>
-          <v-radio label="가운데 정렬" value="text-center"/>
-          <v-radio label="오른쪽 정렬" value="text-right"/>
-        </v-radio-group>
-      </v-col>
-    </v-row>
+    <soon-radio :item="align"/>
+<!--    <v-row>-->
+<!--      <v-col>-->
+<!--        <v-radio-group v-model="align" row @change="changeAlign">-->
+<!--          <v-radio label="왼쪽 정렬" value="text-left"/>-->
+<!--          <v-radio label="가운데 정렬" value="text-center"/>-->
+<!--          <v-radio label="오른쪽 정렬" value="text-right"/>-->
+<!--        </v-radio-group>-->
+<!--      </v-col>-->
+<!--    </v-row>-->
     <v-text-field v-model="titleText" @input="changeText" />
   </v-card>
 </template>
 
 <script>
+import MenuTitle from "./commons/MenuTitle";
+import SoonRadio from "./commons/SoonRadio";
+
 export default {
   name: "TextMenu",
+  components: {SoonRadio, MenuTitle},
   props:{
     title:String
   },
   data:()=>({
-    kinds:'',
-    listkinds:'',
-    align:'',
+    size:[
+      {
+        label:'작게',
+        value:'text-subtitle-1'
+      },
+      {
+        label:'크게',
+        value:'text-h4'
+      }
+    ],
+    kinds:[
+      {
+        label:'본문형',
+        value:'본문형'
+      }  ,
+      {
+        label:'목록형',
+        value:'목록형'
+      }
+    ],
+    listKinds:[
+      {
+        label:'번호형',
+        value:'ol'
+      }   ,
+      {
+        label:'기호형',
+        value:'ul'
+      }
+    ],
+    align:[
+      {
+        label:'왼쪽 정렬',
+        value:'text-left'
+      }  ,
+      {
+        label:'가운데 정렬',
+        value:'text-center'
+      },
+      {
+        label:'오른쪽 정렬',
+        value:'text-right'
+      }
+    ],
     titleText:'',
-    size:'',
-    list:[]
+    list:false
   }),
   computed:{
-    kind(){
-      return this.kinds === '목록형'
-    }
+
   },
   methods:{
+    selectList(e){
+      console.log('selectList e?'+e);
+      this.list = (e === '목록형');
+      console.log('this.list?'+this.list);
+    },
     changeText(e){
       console.log("changeTitleText"+e);
       this.$emit('changeText',e);

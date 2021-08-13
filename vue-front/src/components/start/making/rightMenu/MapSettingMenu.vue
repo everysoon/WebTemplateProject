@@ -1,58 +1,45 @@
 <template>
   <v-card class="pa-5">
-    <v-row>
-      <v-col>
-        <v-card-title class="font-weight-black">주소 : 오시는길</v-card-title>
-      </v-col>
-      <v-col cols="1">
-        <v-checkbox label="사용" value="addrUse"/>
-      </v-col>
-    </v-row>
-    <v-row>
-      <icon-with-button icon="map-marker" button-name="지도에서 위치 선택"/>
-    </v-row>
+    <menu-title title="주소 : 오시는길" :use="true" :map="true"/>
 
     <v-divider/>
 
-    <v-row class="pa-5">
-      <v-col>
-        <v-card-title class="font-weight-black">이용안내 : 제공서비스</v-card-title>
-      </v-col>
-      <v-col>
-        <v-checkbox label="사용" value="infoUse"/>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <v-radio-group @change="changeInfo" row>
-          <v-radio label="일반 업종" value="normal"/>
-          <v-radio label="숙박업" value="bed"/>
-        </v-radio-group>
-      </v-col>
-    </v-row>
+    <menu-title title="이용안내 : 제공서비스" :use="true"/>
+
+    <soon-radio :item="item"/>
     <v-divider/>
-      <v-row v-for="n in 4" :key="n">
-        <v-col v-for="(k) in 3" :key="k">
-          n : {{n}}
-          k : {{k}}
+    <v-row v-for="n in 4" :key="n">
+      <v-col v-for="(k) in 3" :key="k">
+        n : {{ n }}
+        k : {{ k }}
 
-<!--        <v-checkbox  :label="`${info[k+1+(n*(n-1))].label}`" :value="`${info[k+1+(n*(n-1))].value}`"/>-->
+        <!--        <v-checkbox  :label="`${info[k+1+(n*(n-1))].label}`" :value="`${info[k+1+(n*(n-1))].value}`"/>-->
 
-        </v-col>
-      </v-row>
-
+      </v-col>
+    </v-row>
 
 
   </v-card>
 </template>
 
 <script>
-import IconWithButton from "@/components/button/IconWithButton";
+import MenuTitle from "./commons/MenuTitle";
+import SoonRadio from "./commons/SoonRadio";
 
 export default {
-  name: "MapSettingMenu",
-  components: {IconWithButton},
-  data: () => ({
+  name      : "MapSettingMenu",
+  components: {SoonRadio, MenuTitle},
+  data      : () => ({
+    item: [
+      {
+        label: '일반업종',
+        value: 'normal'
+      },
+      {
+        label: '숙박업',
+        value: 'bed'
+      }
+    ],
     info: [
       {
         label: '예약',
@@ -92,7 +79,7 @@ export default {
       }
     ]
   }),
-  methods: {
+  methods   : {
     changeInfo(e) {
       console.log('changeInfo' + e);
       this.$emit('changeInfo', e);

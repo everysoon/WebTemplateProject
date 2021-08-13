@@ -1,23 +1,8 @@
 <template>
   <v-card class="pa-5">
-    <v-row>
-      <v-col cols="4" class="d-flex justify-center align-center">
-        <v-card-title class="font-weight-black">이미지 여러장</v-card-title>
-        <tool-tip-icon-button tooltip="이미지 올리기" icon="file-upload"/>
-      </v-col>
-      <v-col cols="6" class="d-flex align-center">
-        <v-card-text>이미지와 텍스트를 함께 추가합니다.</v-card-text>
-      </v-col>
-    </v-row>
+    <menu-title title="이미지 여러장" :image="true" :subTitleUse="true" sub-title="이미지와 텍스트를 함께 추가합니다."/>
     <v-divider/>
-    <v-row class="pa-5">
-      <v-radio-group row @change="changeInfo">
-        <v-radio label="이미지 왼쪽" value="left"/>
-        <v-radio label="이미지 오른쪽" value="right"/>
-        <v-radio label="1단 이미지" value="one-stage"/>
-        <v-radio label="2단 이미지" value="two-stage"/>
-      </v-radio-group>
-    </v-row>
+   <soon-radio :item="item"/>
     <v-divider/>
     <v-row class="pa-5">
       <v-checkbox class="mr-5" v-model="titleWrite" label="타이틀쓰기"/>
@@ -33,24 +18,37 @@
         <v-text-field placeholder="설명을 입력하세요"/>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col class="d-flex justify-center">
-        <icon-with-button :size="750" icon="plus" button-name="목록 추가하기"/>
-      </v-col>
-    </v-row>
-
-
+    <bar-button name="목록 추가하기"/>
   </v-card>
 </template>
 
 <script>
-import ToolTipIconButton from "@/components/button/ToolTipIconButton";
-import IconWithButton from "@/components/button/IconWithButton";
+import MenuTitle from "./commons/MenuTitle";
+import SoonRadio from "./commons/SoonRadio";
+import BarButton from "./commons/BarButton";
 
 export default {
   name: "MultiImageWithTextMenu",
-  components: {IconWithButton, ToolTipIconButton},
+  components: {BarButton, SoonRadio, MenuTitle},
   data: () => ({
+    item:[
+      {
+        label:'이미지 왼쪽',
+        value:'left'
+      }  ,
+      {
+        label:'이미지 오른쪽',
+        value:'right'
+      },
+      {
+        label:'1단 이미지',
+        value:'one-stage'
+      },
+      {
+        label:'2단 이미지',
+        value:'two-stage'
+      }
+    ],
     titleWrite: true,
     infoWrite: true,
   }),

@@ -1,26 +1,34 @@
 <template>
 <v-card class="pa-5">
-  <v-row>
-    <v-col>
-      <v-card-title class="font-weight-black">구분선</v-card-title>
-    </v-col>
-  </v-row>
+ <menu-title title="구분선"/>
   <v-divider/>
-  <v-row >
-    <v-col>
-      <v-radio-group row @change="changeLine">
-        <v-radio label="공백" value="empty"/>
-        <v-radio label="실선" value="line"/>
-        <v-radio label="점선" value="dot"/>
-      </v-radio-group>
-    </v-col>
-  </v-row>
+<soon-radio :item="item"/>
 </v-card>
 </template>
 
 <script>
+import MenuTitle from "./commons/MenuTitle";
+import SoonRadio from "./commons/SoonRadio";
+
 export default {
   name: "LineMenu",
+  components: {SoonRadio, MenuTitle},
+  data:()=>({
+    item:[
+      {
+        label:'공백',
+        value:'empty'
+      },
+      {
+        label:'실선',
+        value:'line'
+      },
+      {
+        label:'점선',
+        value:'dot'
+      }
+    ]
+  }),
   methods:{
     changeLine(e){
       console.log('changeLine'+e);

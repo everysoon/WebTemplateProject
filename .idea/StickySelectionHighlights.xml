@@ -203,12 +203,67 @@
             <PaintGroupHighlightMap />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/leftMenu/LeftTemplate.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/ButtonMenu.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/CongratulationMenu.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/ContentMenu.vue">
           <value>
             <PaintGroupHighlightMap />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/ImageMenu.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/LineMenu.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/MapMenu.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/MapSettingMenu.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/MultiImageMenu.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/MultiImageWithTextMenu.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/RightMenuText.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/SNSMenu.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/TemplateMenu.vue">
           <value>
             <PaintGroupHighlightMap />
           </value>
@@ -219,6 +274,36 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/TitleText.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/VideoMenu.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/commons/BarButton.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/commons/ButtonMenuItem.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/commons/MenuInfoText.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/commons/MenuTitle.vue">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vue-front/src/components/start/making/rightMenu/commons/SoonRadio.vue">
           <value>
             <PaintGroupHighlightMap />
           </value>
