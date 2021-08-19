@@ -1,7 +1,7 @@
 <template>
 
   <v-card flat height="700" tile>
-    <v-img src="@/assets/background.jpg" max-height="700" class="d-flex align-center"
+    <v-img :src="require('@/assets/background.jpg')" max-height="700" class="d-flex align-center"
            gradient="to top right, rgba(0,0,0,.33), rgba(200,200,200,.7)">
       <v-row>
         <v-spacer/>

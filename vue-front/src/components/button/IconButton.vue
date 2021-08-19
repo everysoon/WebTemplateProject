@@ -2,6 +2,7 @@
   <v-btn icon v-if="!link" @click="changeIcon">
     <v-icon :size="size">mdi-{{icon}}</v-icon>
   </v-btn>
+  <!--v-btn block depressed-->
   <v-btn icon v-else @click="newPageRedirect" color="white">
     <v-icon :size="size">mdi-{{icon}}</v-icon>
   </v-btn>

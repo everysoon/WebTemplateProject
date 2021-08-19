@@ -9,12 +9,14 @@
         <menu-button v-if="index<4" :item="m"/>
       </div>
       <v-spacer/>
-      <div v-if="!login">
-      <menu-button :item="menu[4]"/>
-      <menu-button :item="menu[5]"/>
+      <div v-if="isLogin">
+        <text-button :title="`${userInfo.name}님`"/>
+        <menu-button :item="menu[6]"/>
+        <menu-button :item="menu[7]"/>
       </div>
       <div v-else>
-        <menu-button :item="menu[6]"/>
+        <menu-button :item="menu[4]"/>
+        <menu-button :item="menu[5]"/>
       </div>
       <v-spacer/>
     </v-app-bar>
@@ -23,12 +25,16 @@
 <script>
 import MenuButton from "@/components/button/MenuButton";
 import SoonTitle  from "@/components/button/SoonTitle";
+import {mapState} from 'vuex'
+import TextButton from "../../components/button/TextButton";
 
 export default {
   name: "TopMenu",
-  components: {SoonTitle, MenuButton},
+  components: {TextButton, SoonTitle, MenuButton},
+  computed:{
+    ...mapState(['isLogin','userInfo'])
+  },
   data:()=>({
-    login:false,
     menu:[
       {
         title:"시작하기",
@@ -64,6 +70,11 @@ export default {
         title:"마이페이지",
         tab:false,
         link:"/mypage"
+      },
+      {
+        title:"로그아웃",
+        tab:false,
+        link:"/logout"
       },
     ]
   })

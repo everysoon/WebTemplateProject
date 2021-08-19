@@ -1,18 +1,34 @@
-import Vue  from 'vue'
-import Vuex from 'vuex'
+import Vue    from 'vue'
+import Vuex   from 'vuex'
+import router from '../router/index.js'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
     isLogin:false,
+    isLoginError:false,
+    allUsers:[],
+    userInfo:null,
     isDrawer:false,
     leftMenuId:1,
     radioValue:''
   },
   mutations: {
-    setIsLogin(state,isLogin){
-      state.isLogin = isLogin;
+    // state값을 바꿈
+    loginSuccess(state,user){
+      state.isLogin = true;
+      state.isLoginError = false;
+      state.userInfo = user;
+    },
+    loginError(state){
+      state.isLogin=false;
+      state.isLoginError = true;
+    },
+    logout(state){
+      state.isLogin =false;
+      state.isLoginError = false;
+      state.userInfo = null;
     },
     changeDrawer(state){
       console.log(state.isDrawer)
@@ -29,7 +45,24 @@ export default new Vuex.Store({
 
   },
   actions: {
-
+  // 비지니스로직 관리
+    login({state,commit}, obj){
+      let selectedUser = null;
+      // DB의 allUsers로 가져오기
+      state.allUsers.forEach(user=>{
+        if(user.email === obj.email) selectedUser = user;
+      })
+      if(selectedUser === null ||selectedUser.password !== obj.password ){
+        commit('loginError');
+      }else {
+        commit('loginSuccess',selectedUser);
+        router.push("/");
+      }
+    },
+    logout({commit}){
+      commit('logout');
+      router.push("/");
+    }
   },
   modules: {
   },
@@ -40,6 +73,9 @@ export default new Vuex.Store({
     },
     getRadioValue(state){
       return state.radioValue;
+    },
+    getLogin(state){
+      return state.isLogin;
     }
   }
 })
