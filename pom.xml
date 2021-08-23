@@ -26,6 +26,7 @@
 <!--            <artifactId>spring-webmvc</artifactId>-->
 <!--            <version>${spring.version}</version>-->
 <!--        </dependency>-->
+
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
@@ -129,6 +130,39 @@
     </dependencies>
     <build>	<pluginManagement>
         <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId> <!-- 명령어를 실행 시키도록 해주는 plugin -->
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>4.0.0</version>
+                <executions>
+                    <!-- npm install -->
+                    <execution>
+                        <id>front-end install</id>
+                        <goals><goal>exec</goal></goals>
+                        <phase>prepare-package</phase>
+                        <configuration>
+                            <executable>npm</executable>
+                            <arguments><argument>install</argument></arguments>
+                        </configuration>
+                    </execution>
+                    <!-- npm run build -->
+                    <execution>
+                        <id>front-end build package</id>
+                        <goals><goal>exec</goal></goals>
+                        <phase>prepare-package</phase>
+                        <configuration>
+                            <executable>npm</executable>
+                            <arguments>
+                                <argument>run</argument>
+                                <argument>build</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <workingDirectory>${basedir}/front-end</workingDirectory>
+                </configuration>
+            </plugin>
             <plugin>
                 <artifactId>maven-clean-plugin</artifactId>
                 <version>3.1.0</version>

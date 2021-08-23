@@ -2,6 +2,7 @@
   <v-card>x
     <search-bar @changeSearchField="changeSearchField"/>
     <v-data-table
+        @click:row="boardClick"
       :headers="headers"
       :items="whatClick==='notice'?noticeItems:guideItems"
       :search="search"
@@ -119,6 +120,9 @@ export default {
   methods   : {
     changeSearchField(val) {
       this.search = val;
+    },
+    boardClick(e){
+      console.log(e);
     }
   }
 }

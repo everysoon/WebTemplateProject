@@ -52,38 +52,17 @@ const routes = [
         path:'/start',
         name:'StartLayout',
         component:()=>import('@/layouts/start/StartLayout'),
-        children: [
-            {
-                path:'1',
-                name:'StartHome',
-                component:()=>import('@/layouts/start/StartHome')
-            },
-            {
-                path:'2',
-                name:'StartInvite',
-                component:()=>import('@/layouts/start/StartInvite')
-            },
-            {
-                path:'3',
-                name:'StartPhoto',
-                component:()=>import('@/layouts/start/StartPhoto')
-            },
-            {
-                path:'4',
-                name:'StartSNS',
-                component:()=>import('@/layouts/start/StartSNS')
-            },
-            {
-                path:'5',
-                name:'StartCome',
-                component:()=>import('@/layouts/start/StartCome')
-            },
-            {
-                path:'6',
-                name:'StartCongratulation',
-                component:()=>import('@/layouts/start/StartCongratulation')
-            },
-        ]
+
+    },
+    {
+        path:'/write',
+        name:'Write',
+        component:()=>import('@/views/Write')
+    },
+    {
+        path:'/read',
+        name:'Read',
+        component:()=>import('@/views/Read')
     }
 ]
 

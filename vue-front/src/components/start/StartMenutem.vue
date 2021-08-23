@@ -1,11 +1,11 @@
 <template>
   <v-row>
-    <v-col v-for="item in items" :key="item.id" @click="changeStartBottom(item.id)">
+    <v-col v-for="item in items" :key="item.id">
       <v-hover v-slot="{hover}">
         <v-card :elevation="hover?12:5"
                 align="center"
                 rounded
-                @click="clickStartMenu(item.id)"
+                @click="changeStartBottom(item.id)"
                 height="230px"
                 width="159px"
                 :class="{'on-hover':hover}"
@@ -32,10 +32,7 @@ export default {
       e.target.style.cursor = "pointer"
     },
     changeStartBottom(id) {
-      this.$emit('changePageId', id);
-    },
-    clickStartMenu(id){
-      this.$emit('clickStartMenu',id);
+      this.$store.commit('changeStartBottom', id);
     }
   },
   data   : () => ({
@@ -67,9 +64,7 @@ export default {
         id   : 6,
         title: '축하해 주세요',
         src  : 'page_board.jpg'
-      },
-
-
+      }
     ]
   })
 }

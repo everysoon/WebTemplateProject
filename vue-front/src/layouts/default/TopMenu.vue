@@ -39,7 +39,7 @@ export default {
       {
         title:"시작하기",
         tab:true,
-        link:"/start/1"
+        link:"/start"
       },
       {
         title:"활용하기",

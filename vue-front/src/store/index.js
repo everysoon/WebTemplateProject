@@ -11,8 +11,9 @@ export default new Vuex.Store({
     allUsers:[],
     userInfo:null,
     isDrawer:false,
-    leftMenuId:1,
-    radioValue:''
+    leftMenuId:2,
+    radioValue:'',
+    startBottomPage:1,
   },
   mutations: {
     // state값을 바꿈
@@ -39,10 +40,13 @@ export default new Vuex.Store({
       state.leftMenuId = id;
       console.log('leftMenuId'+state.leftMenuId);
     },
+    changeStartBottom(state,id){
+      console.log('changeStartBottom',id);
+      state.startBottomPage = id;
+    },
     changeSoonRadio(state,e){
       state.radioValue = e;
     }
-
   },
   actions: {
   // 비지니스로직 관리
@@ -62,20 +66,22 @@ export default new Vuex.Store({
     logout({commit}){
       commit('logout');
       router.push("/");
+    },
+    getStartPage(state){
+      console.log('getStartPage',state.startBottomPage);
+      return state.startBottomPage;
     }
   },
   modules: {
   },
   getters:{
-    getClickLeftMenu(state){
-      console.log('getClickLeftMenu'+state.leftMenuId);
-      return state.leftMenuId;
-    },
+
     getRadioValue(state){
       return state.radioValue;
     },
     getLogin(state){
       return state.isLogin;
-    }
+    },
+
   }
 })
